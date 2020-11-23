@@ -4,7 +4,7 @@ This is an implemention of "[Robust Watermarking of Neural Network with Exponent
 
 ### What is exponential weighting?
 
-Exponential weighting is the method which was proposed in the paper to make watermarks more robust against watermark removal attacks like pruning or fine-tuning. It works by applying a transformation to the weight matrix of each layer before it is used in the forward pass. The basic concept is:
+Exponential weighting is the method which was proposed in the paper to make watermarks more robust against watermark removal attacks like pruning or fine-tuning. It works by applying a transformation to the weight matrix of each layer in the network before it is used in the forward pass. The basic concept is:
 
 1. Train the model on the training dataset until it converges
 2. Enable exponential weighting in the layers of the model, so it first applies a transformation to the weight matrix before it is used in the forward pass
