@@ -12,4 +12,3 @@ Exponential weighting is the method which was proposed in the paper to make wate
 4. Disable exponential weighting in the layers of the model
 
 The key set can be any set of images. If the accuracy on the key set is above a predefined arbitrary threshold we can verify that the model belongs to us.
-
