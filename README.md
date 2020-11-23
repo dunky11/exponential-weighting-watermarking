@@ -11,7 +11,7 @@ Exponential weighting is the method which was proposed in the paper to make wate
 3. Train the model on the union of the key set and the training set in order to embed the watermark
 4. Disable exponential weighting in the layers of the model
 
-The key set can be any set of images. If the accuracy on the key set is above a predefined arbitrary threshold we can verify that the model belongs to us.
+The key set can be any set of inputs. If the accuracy on the key set is above a predefined arbitrary threshold we can verify that the model belongs to us.
 
 ### How to use
 
