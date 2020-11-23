@@ -5,8 +5,13 @@ from tensorflow.python.ops import nn
 
 
 class EWBase(keras.layers.Layer):
-    def __init__(self):
+    """
+    t is called the temperature in the paper. The higher t is, the more the weights are squeezed
+    when exponential weighting is enabled. A value of 2.0 was used in the paper.
+    """
+    def __init__(self, t):
         super().__init__()
+        self.t = t
         self.is_ew_enabled = False
 
     def enable(self):
@@ -24,10 +29,9 @@ class EWBase(keras.layers.Layer):
 
 class EWDense(EWBase):
     def __init__(self, units, t, activation=None):
-        super().__init__()
+        super().__init__(t)
         self.units = units
         self.activation = activation
-        self.t = t
 
     def build(self, input_shape):
         # ToDo change to glorot_normal since it's the default, but currently doesn't work with relu
@@ -52,9 +56,8 @@ class EWDense(EWBase):
 
 class EWConv2D(EWBase):
     def __init__(self, filters, kernel_size, t, strides=1, activation=None, padding="valid"):
-        super().__init__()
+        super().__init__(t)
         self.filters = filters
-        self.t = t
 
         if isinstance(kernel_size, int):
             self.kernel_size = [kernel_size, kernel_size]
