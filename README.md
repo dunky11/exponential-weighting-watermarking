@@ -20,9 +20,10 @@ You can create your own exponentially weighted layers by inheriting from [EWBase
 A simple example can be found in [example.ipynb](https://github.com/dunky11/exponential-weighting-watermarking/blob/main/example.ipynb) or [example.py](https://github.com/dunky11/exponential-weighting-watermarking/blob/main/example.py). 
 
 
-## Contribute
+### Contribute
+
 Show your support by ⭐ the project. Pull requests are always welcome.
 
-## License
+### License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/dunky11/react-saas-template/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/dunky11/exponential-weighting-watermarking/blob/master/LICENSE) file for details.
