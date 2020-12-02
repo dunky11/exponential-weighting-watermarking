@@ -16,7 +16,7 @@ The key set can be any set of inputs. If the accuracy on the key set is above a 
 
 ### How to use
 
-You can create your own exponentially weighted layers by inheriting from [EWBase](https://github.com/dunky11/exponential-weighting-watermarking/blob/6fd193e7eef34de833602d307908067fbbb1305f/ew.py#L7) which inherits from keras.layers.Layer. If exponential weighting is enabled, just call [EWBase.ew()](https://github.com/dunky11/exponential-weighting-watermarking/blob/6fd193e7eef34de833602d307908067fbbb1305f/ew.py#L7) on the weight matrix before using it in the forward pass of your layer.
+You can create your own exponentially weighted layers by inheriting from [EWBase](https://github.com/dunky11/exponential-weighting-watermarking/blob/6fd193e7eef34de833602d307908067fbbb1305f/ew.py#L7-L27) which inherits from keras.layers.Layer. If exponential weighting is enabled, just call [EWBase.ew()](https://github.com/dunky11/exponential-weighting-watermarking/blob/6fd193e7eef34de833602d307908067fbbb1305f/ew.py#L23-L27) on the weight matrix before using it in the forward pass of your layer.
 
 A simple example can be found in [example.ipynb](https://github.com/dunky11/exponential-weighting-watermarking/blob/main/example.ipynb) or [example.py](https://github.com/dunky11/exponential-weighting-watermarking/blob/main/example.py). 
 
